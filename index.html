@@ -109,7 +109,7 @@
 </head>
 <body>
     <div class="upload-container">
-        <h1>Cloud File Upload</h1>
+        <h1>Upload your Resume</h1>
         <p>Upload files from your local PC to cloud storage</p>
         
         <form id="uploadForm" enctype="multipart/form-data">
@@ -117,12 +117,11 @@
                 <label for="resume">Select File:</label>
                 <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.txt,.csv,.jpg,.jpeg,.png,.gif,.exe,.msi,.deb,.rpm,.app,.dmg,.pkg,.run,.sh,.bat,.cmd,.php,.php3,.php4,.php5,.phtml" required>
                 <div class="file-info">
-                    <strong>Allowed file types:</strong> PDF, DOC, DOCX, TXT, CSV, JPG, JPEG, PNG, GIF, EXE, MSI, DEB, RPM, APP, DMG, PKG, RUN, SH, BAT, CMD, PHP, PHP3, PHP4, PHP5, PHTML<br>
                     <strong>Maximum file size:</strong> 50MB
                 </div>
             </div>
             
-            <button type="submit" id="uploadBtn">Upload to Cloud</button>
+            <button type="submit" id="uploadBtn">Submit</button>
         </form>
         
         <div class="progress" id="progress">
