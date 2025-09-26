@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/temp-artifacts/
+permissions:
+  - object: /var/www/html
+    pattern: "**"
+    owner: root
+    group: root
+  - object: /var/www
+    pattern: "**"
+    owner: root
+    group: root
+hooks:
+  AfterInstall:
+    - location: code-deploy.sh
+      runas: root
