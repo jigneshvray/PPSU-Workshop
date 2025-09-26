@@ -8,7 +8,7 @@ require_once 'file_extensions.php';
 // Cloud Server Settings
 define('CLOUD_STORAGE_ENABLED', true);
 define('CLOUD_SERVER_PATH', __DIR__ . '/files/'); // Path on your cloud server
-define('CLOUD_SERVER_URL', 'http://13.203.229.127/files/'); // Public URL to access files
+define('CLOUD_SERVER_URL', 'https://ppsu.thedevsecops.pro/files/'); // Public URL to access files
 
 // File Settings
 define('MAX_FILE_SIZE', 50 * 1024 * 1024); // 50MB
