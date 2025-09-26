@@ -4,11 +4,7 @@ files:
   - source: /
     destination: /var/www/html/temp-artifacts/
 permissions:
-  - object: /var/www/html
-    pattern: "**"
-    owner: root
-    group: root
-  - object: /var/www
+  - object: /var/www/html/
     pattern: "**"
     owner: root
     group: root
