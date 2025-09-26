@@ -11,7 +11,7 @@ echo "--------------------- Deployment starting on the $server -----------------
 
 ls -lsha $ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER
 
-ls -Ar $ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER/build | xargs -I {} -P 1 -n 1 rsync -rlpgoDc --exclude-from "$EXCLUDE_DIRS_FILES" "$ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER/{}" "$PROJECT_PATH" --out-format="%n"
+ls -Ar $ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER | xargs -I {} -P 1 -n 1 rsync -rlpgoDc --exclude-from "$EXCLUDE_DIRS_FILES" "$ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER/{}" "$PROJECT_PATH" --out-format="%n"
 
 echo "--------------------- Folder cleaning on the $server ---------------------------"
 rsync -rlpgoDc --exclude-from "$EXCLUDE_DIRS_FILES" --delete "$ROOT_PATH/$TEMP_DEPLOY_PATH/$TEMP_FOLDER/" "$PROJECT_PATH" --out-format="%n"
