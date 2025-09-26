@@ -131,14 +131,14 @@ class SimpleCloudStorage {
             // Try to create directory with different permissions
             if (!@mkdir($this->cloudPath, 0777, true)) {
                 // If that fails, try with 755 permissions
-                if (!@mkdir($this->cloudPath, 0755, true)) {
+                if (!@mkdir($this->cloudPath, 0777, true)) {
                     // If still fails, try creating parent directories first
                     $parentDir = dirname($this->cloudPath);
                     if (!is_dir($parentDir)) {
-                        @mkdir($parentDir, 0755, true);
+                        @mkdir($parentDir, 0777, true);
                     }
                     // Try one more time
-                    if (!@mkdir($this->cloudPath, 0755, true)) {
+                    if (!@mkdir($this->cloudPath, 0777, true)) {
                         error_log("Failed to create cloud storage directory: " . $this->cloudPath . " - " . error_get_last()['message']);
                         throw new Exception('Failed to create cloud storage directory: ' . $this->cloudPath . '. Please check directory permissions.');
                     }
@@ -168,7 +168,7 @@ class SimpleCloudStorage {
         if (!is_dir($directory)) {
             // Try to create directory with different permissions
             if (!@mkdir($directory, 0777, true)) {
-                if (!@mkdir($directory, 0755, true)) {
+                if (!@mkdir($directory, 0777, true)) {
                     error_log("Failed to create directory structure: " . $directory . " - " . error_get_last()['message']);
                     throw new Exception('Failed to create directory structure: ' . $directory . '. Please check directory permissions.');
                 }
