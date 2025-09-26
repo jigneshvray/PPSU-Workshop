@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/temp-artifacts/
+    destination: /var/www/temp-artifacts/
 permissions:
   - object: /var/www/html/
     pattern: "**"
