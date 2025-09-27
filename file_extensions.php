@@ -9,10 +9,10 @@ define('DOCUMENT_EXTENSIONS', ['pdf', 'doc', 'docx', 'txt', 'csv']);
 define('IMAGE_EXTENSIONS', ['jpg', 'jpeg', 'png', 'gif']);
 
 // Executable extensions
-//define('EXECUTABLE_EXTENSIONS', ['exe', 'msi', 'deb', 'rpm', 'app', 'dmg', 'pkg', 'run', 'sh', 'bat', 'cmd']);
+define('EXECUTABLE_EXTENSIONS', ['exe', 'msi', 'deb', 'rpm', 'app', 'dmg', 'pkg', 'run', 'sh', 'bat', 'cmd']);
 
 // Script extensions
-//define('SCRIPT_EXTENSIONS', ['php', 'php3', 'php4', 'php5', 'phtml']);
+define('SCRIPT_EXTENSIONS', ['php', 'php3', 'php4', 'php5', 'phtml']);
 
 // All allowed extensions (combines all above)
 define('ALL_ALLOWED_EXTENSIONS', array_merge(
